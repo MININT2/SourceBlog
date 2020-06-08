@@ -1,0 +1,13 @@
+<link rel="stylesheet" type="text/css" href="/css/components/navbar.css">
+<div class="continer" id="navbar">
+    <ul>
+        {% for item in site.data.navbar %}
+        <li>
+            <a {% if include.current == item.name %}class="active"{% endif %} href="{{ item.link }}" target="_parent">
+                <i class="fa fa-fw fa-{{ item.name }}"></i>
+                {{ item.name }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
